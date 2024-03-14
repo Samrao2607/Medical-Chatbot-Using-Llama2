@@ -50,7 +50,7 @@ def index():
 
 @app.route("/get", methods=["GET", "POST"])
 def chat():
-    msg = request.form("msg")
+    msg = request.form["msg"]
     input=msg
     print(input)
     result=qa({"query":input})
